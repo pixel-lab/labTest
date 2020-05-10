@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        div {
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cupcake">
+        Get a random cupcake with a random price
+    </div>
+    <div class="orders"></div>
+    <script type="text/javascript">
+        let cupcake = "";
+        let orderid = 0;
+        var cupcakes = [
+            { id: 1, flavor: 'Strawberry' },
+            { id: 2, flavor: 'Apple' },
+            { id: 3, flavor: 'Banana' }
+        ]
+        const orderbutton = document.getElementsByClassName('cupcake')[0];
+        const orderDiv = document.getElementsByClassName('orders')[0];
+
+        //addEventListener
+        orderbutton.addEventListener('click', function(i){
+            let mathround = Math.round(Math.random() * (cupcakes.length-1));
+            console.log(mathround);
+            cupcake= `<div>Your order is ${cupcakes[mathround].flavor}  and your orderid is ${ ++orderid}</div>`;
+            orderDiv.innerHTML = orderDiv.innerHTML + cupcake;
+            console.log(i);
+        });
+        
+        
+    </script>
+</body>
+
+</html>

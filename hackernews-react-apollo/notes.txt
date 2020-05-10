@@ -1,0 +1,18 @@
+############ installing basic react app globally
+yarn global add create-react-app
+
+############ installing react
+create-react-app hackernews-react-apollo
+
+############ apollo client installation
+yarn add apollo-boost react-apollo graphql
+
+############ download basic package
+curl https://codeload.github.com/howtographql/react-apollo/tar.gz/starter | tar -xz --strip=1 react-apollo-starter/server
+
+############ installind depandancy n run prisma
+cd server
+yarn install
+yarn prisma deploy > config demo prisma server
+
+

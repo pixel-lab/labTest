@@ -1,0 +1,36 @@
+################## installing babel for applying import & export
+@ npm install babel-cli babel-preset-env
+@ babel preset config in .babelrc > 
+   {
+        "presets":[
+            "env"
+        ]
+    }
+@ add start on the package.json by adding under the script section
+    "start" :"babel-node src/index.js"
+
+
+####################### import and export -- check the video
+we have 2 types of export name and default
+
+@ name export we  export the function or variables with curly brackets hopefully es6 distructoring
+like 
+    const name = "sankha"; export {name}
+    and import like 
+    import name from '/path of the file'
+
+@ default export
+    const greeting = (name) => `hello ${name}`
+    export {name, greeting as default} // using name from the top functions
+
+####################### installing graphql yoga
+npm i graphql-yoga@1.17.7
+
+####################### 5 types of scalers in graphql
+string, number, boolean, float, ID
+
+######################## start scrip
+@ with babel-node
+    "start": "babel-node src/index.js"
+@ with nodemon --exec for using babel
+    "start": "nodemon src/index.js --exec babel-node"

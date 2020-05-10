@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.toolbar {
+  margin: 10px 0px;
+}
+
+.toolbar > .toolbar-item:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+.toolbar-item {
+  padding: 0px 10px;
+}

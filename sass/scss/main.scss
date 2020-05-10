@@ -1,0 +1,15 @@
+$bgcolor : blue;
+$text-color: #fff;
+
+/*map attributes*/
+$font-weight: (
+    'normal':400,
+    'bold':800
+);
+
+body {
+    background: $bgcolor;
+    color:$text-color;
+    font-weight: map-get($font-weight , bold );/*fetch map values*/
+}
+
